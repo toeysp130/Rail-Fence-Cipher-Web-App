@@ -9,37 +9,30 @@
     </head>
     <body>
         <div class="container">
-            <table class="table">
-                <tr>
-                    <td>
-                        <h2>Rail Fence Cipher </h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Plaintext<BR>
-                        <TEXTAREA id="p" name="p" rows="4" cols="50">attack at dawn</TEXTAREA>
-                        <!-- <p>Enter the word that you want to ENCRYPT, then put "NUMBER" in a key form to make how many rail you need</p> -->
-                    </td>
-                    <td>  
-                        <tr>  
-                            <td>
-                                <P>Key    <INPUT id="key" name="key" size="5" value=" " type="text"></P>
-                            </td>
-                            <td>
-                                <p><INPUT name="btnEn" value="Encrypt >>" onclick="Encrypt()" type="button"> </p>
-                            </td>
-                            <td>
-                                <p><INPUT name="btnDe" value="<< Decrypt" onclick="Decrypt()" type="button"></p>
-                            </td>
-                        </tr>
-                    </td>
-                    <td>
-                        <P>Ciphertext<BR><TEXTAREA id="c" name="c" rows="4" cols="50"></TEXTAREA> </P>
-                    </td>
-                </tr>
-            </table>
-                    
+            <div class="container-fluid">
+                <div class="row text-center m-5">
+                    <h2>Rail Fence Cipher </h2>     
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center">
+                        Plaintext
+                        <textarea id="p" name="p" rows="6" cols="40">attack at dawn</textarea>
+                            <!-- <p>Enter the word that you want to ENCRYPT, then put "NUMBER" in a key form to make how many rail you need</p> -->
+                    </div>                        
+                    <div class="col-md-4 text-center">
+                        <p>Key</p> 
+                            <input id="key" name="key" size="7" value=" " type="text"><br><br>
+                            <input name="btnDe" value="<< Decrypt" onclick="Decrypt()" type="button">
+                            <input name="btnEn" value="Encrypt >>" onclick="Encrypt()" type="button"> 
+                            
+                    </div>
+                    <div class="col-4 text-center">
+                        Ciphertext
+                        <textarea id="c" name="c" rows="6" cols="40"></textarea> 
+                      
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
     <script>function Encrypt() {
